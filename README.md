@@ -65,10 +65,6 @@
 
 ## Project Details
 
-- **Our Project Report:** [Report.pdf](https://drive.google.com/file/d/1A_gBXKfEjNwHZbtnanu82jgLrbtblQ38/view?usp=sharing)
-
-- **Published Paper:** [Paper.pdf](https://drive.google.com/file/d/1KEP_kAessP08Zo8zHsG9IqlP4Yuj9SO0/view?usp=sharing)
-
 - **Dataset Link:** [Sign_Dataset](https://drive.google.com/drive/folders/1LUUknqqRNHAmIZYrcgo-4n2HrM37uFa3?usp=share_link)
 
 - **Gesture Recogition Documentation:** [Mediapipe](https://developers.google.com/mediapipe/solutions/vision/gesture_recognizer)
@@ -94,5 +90,5 @@
 For support, contact
 
 - email: ankurkrishnamishra@gmail.com
-- email : 
+- email : adityashirsath017@gmail.com
 - LinkedIn: [Ankur Mishra](www.linkedin.com/in/ankur-krishna-mishra-923654235)
