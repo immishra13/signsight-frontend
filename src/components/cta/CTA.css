@@ -1,0 +1,79 @@
+.signlang_cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  margin: 4rem 0;
+  border-radius: 24px;
+  background: var(--gradient-primary);
+  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.signlang_cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.signlang_cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.signlang_cta-content h3 {
+  font-family: var(--font-family);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+}
+
+.signlang_cta-button {
+  position: relative;
+  z-index: 2;
+}
+
+.signlang_cta-button button {
+  background: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signlang_cta-button button a {
+  color: var(--color-bg);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.signlang_cta-button button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: #f8fafc;
+}
+
+@media screen and (max-width: 850px) {
+  .signlang_cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+}

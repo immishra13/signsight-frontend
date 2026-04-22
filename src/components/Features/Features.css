@@ -1,0 +1,50 @@
+.signlang_features {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+}
+
+.signlang_feature-heading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.signlang_feature-heading h1 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.signlang_feature-heading p {
+  font-family: var(--secondary-font);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.singlang_features-container {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 990px) {
+  .signlang_features {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .signlang_feature-heading h1 {
+    font-size: 1.75rem;
+  }
+}

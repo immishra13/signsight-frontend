@@ -1,0 +1,55 @@
+.signlang__whatsignlang {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.signlang__whatsignlang-feature {
+  margin-bottom: 3rem;
+}
+
+/* Adjusting the hero feature in whatcomp */
+.signlang__whatsignlang-feature .signlang__features-container__feature {
+  padding: 0;
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.signlang__whatsignlang-feature .signlang__features-container__feature:hover {
+  transform: none;
+}
+
+.signlang__whatsignlang-feature .signlang__features-container_feature-text {
+  max-width: 800px;
+}
+
+.signlang__whatsignlang-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .signlang__whatsignlang-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .signlang__whatsignlang {
+    padding: 2rem;
+  }
+  .signlang__whatsignlang-container {
+    grid-template-columns: 1fr;
+  }
+}

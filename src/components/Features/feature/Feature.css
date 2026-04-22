@@ -1,0 +1,47 @@
+.signlang__features-container__feature {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.signlang__features-container__feature:hover {
+  transform: translateY(-5px);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.signlang__features-container__feature-title {
+  margin-bottom: 1rem;
+}
+
+.title-bar {
+  width: 38px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.signlang__features-container__feature-title h1 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.signlang__features-container_feature-text p {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-subtext);
+}
+
+@media screen and (max-width: 650px) {
+  .signlang__features-container__feature-title h1 {
+    font-size: 1.1rem;
+  }
+}

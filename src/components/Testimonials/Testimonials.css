@@ -1,0 +1,32 @@
+.signlang_testimonials-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.signlang_testimonial-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.signlang_testimonial-header h2 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.signlang_card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .signlang_card-container {
+    grid-template-columns: 1fr;
+  }
+}

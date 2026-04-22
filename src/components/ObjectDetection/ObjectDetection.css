@@ -1,0 +1,223 @@
+.obj-page {
+  min-height: 100vh;
+  padding: 80px 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.obj-card {
+  width: 100%;
+  max-width: 1200px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.obj-head {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.obj-title {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.obj-sub {
+  font-family: var(--secondary-font);
+  color: var(--color-subtext);
+}
+
+.obj-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.tab-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  color: var(--color-subtext);
+  font-family: var(--font-family);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.is-active {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+}
+
+/* Upload Section */
+.obj-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.obj-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.obj-input {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+}
+
+/* Live Section */
+.obj-liveRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.obj-livePane {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pane-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.obj-webcam, .obj-media {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  background: #000;
+  border: 1px solid var(--glass-border);
+  object-fit: cover;
+}
+
+.obj-placeholder {
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px dotted var(--glass-border);
+  color: var(--color-subtext);
+}
+
+.obj-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.obj-btn {
+  padding: 1rem 3rem;
+  border-radius: 16px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  color: white;
+}
+
+.obj-btn--primary {
+  background: var(--gradient-primary);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.obj-btn--danger {
+  background: #ef4444;
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+}
+
+.obj-btn:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+}
+
+/* Knowledge Section */
+.obj-knowledge {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.obj-knowledge h3 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.obj-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.obj-section {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.obj-section h4 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.obj-section p, .obj-section li {
+  font-family: var(--secondary-font);
+  color: var(--color-subtext);
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 1000px) {
+  .obj-liveRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .obj-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+  .obj-form {
+    flex-direction: column;
+  }
+  .obj-btn {
+    width: 100%;
+  }
+}

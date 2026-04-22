@@ -1,0 +1,18 @@
+.signlang_chart {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2rem;
+  height: 100%;
+}
+
+.signlang_chart h2 {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.bar-chart {
+  max-height: 400px;
+}
