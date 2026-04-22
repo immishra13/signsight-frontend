@@ -92,3 +92,4 @@ For support, contact
 - email: ankurkrishnamishra@gmail.com
 - email : adityashirsath017@gmail.com
 - LinkedIn: [Ankur Mishra](www.linkedin.com/in/ankur-krishna-mishra-923654235)
+- LinkedIn: [Aditya Shirsath](www.linkedin.com/in/aditya-shirsath-547141261)
