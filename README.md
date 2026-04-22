@@ -81,13 +81,6 @@
 - **Check this document for project setup:** [SetUpDoc.docx](https://docs.google.com/document/d/1siwZjc0LJQgKTn__vtzs8tMfr9OElrsThmqmRJc9dHE/edit?usp=sharing)
 
 
-## Authors
-
-- [@shubham-more](https://github.com/shubhammore1251/)
-- [@sameer-metkar](https://github.com/sameermetkar/)
-- [@omkar-mandavkar](https://github.com/omkarmandavkar/)
-- [@durgesh-kolhe](https://github.com/Durgesh240)
-
 ## Acknowledgements
 
 - [React](https://react.dev/)
@@ -95,19 +88,6 @@
 - [Firebase](https://firebase.google.com/)
 - [NPM](https://www.npmjs.com/)
 
-## Screenshots
-
-![Hello Image](./public/screenshots/Hello.jpg)
-
-![Meet Image](./public/screenshots/Meet.jpg)
-
-![Deaf Image](./public/screenshots/Deaf.jpg)
-
-![Bye Image](./public/screenshots/Bye.jpg)
-
-![D Image](./public/screenshots/D.jpg)
-
-![Dashboard Image](./public/screenshots/dasboard.jpeg)
 
 ## Support
 
