@@ -15,7 +15,11 @@ export default function ObjectDetection() {
   const [result, setResult] = useState(null); // upload result
 
   const [liveOn, setLiveOn] = useState(false);
-  const [liveFrame, setLiveFrame] = useState(null); // base64 annotated frame
+  const [liveFrame, setLiveFrame] = useState(null);
+  
+  // Use a ref to track if detection should continue
+  const isDetectingRef = useRef(false);
+  // Optional: keep track of the webcam ref to stop the recursion loop cleanly
   const liveTimer = useRef(null);
 
   // -------- Upload flow (image/video) ----------
@@ -45,11 +49,21 @@ export default function ObjectDetection() {
 
   // -------- Live flow ----------
   const sendFrame = async () => {
-    if (!webcamRef.current || !webcamRef.current.video) return;
+    if (!isDetectingRef.current) return;
+    if (!webcamRef.current || !webcamRef.current.video) {
+      if (isDetectingRef.current) {
+        liveTimer.current = setTimeout(sendFrame, 500);
+      }
+      return;
+    }
 
-    // capture frame -> dataURL (jpeg)
     const dataURL = webcamRef.current.getScreenshot({ width: 640, height: 480 });
-    if (!dataURL) return;
+    if (!dataURL) {
+      if (isDetectingRef.current) {
+        liveTimer.current = setTimeout(sendFrame, 500);
+      }
+      return;
+    }
 
     try {
       const res = await fetch(`${API_BASE}/detect_frame`, {
@@ -60,7 +74,13 @@ export default function ObjectDetection() {
       const data = await res.json();
       if (data.ok && data.image) setLiveFrame(data.image);
     } catch {
-      /* swallow errors to keep loop going */
+      /* swallow timeout/errors to keep loop going later */
+    }
+
+    // Schedule next frame only AFTER the current one is entirely done responding
+    // This totally prevents browser DDOS on a sleeping free Render instance
+    if (isDetectingRef.current) {
+         liveTimer.current = setTimeout(sendFrame, 200);
     }
   };
 
@@ -68,19 +88,21 @@ export default function ObjectDetection() {
     setError("");
     setLiveFrame(null);
     setLiveOn(true);
-    // ~5 FPS
-    liveTimer.current = setInterval(sendFrame, 200);
+    isDetectingRef.current = true;
+    sendFrame(); // Start recursive chain
   };
 
   const stopLive = () => {
     setLiveOn(false);
-    if (liveTimer.current) clearInterval(liveTimer.current);
+    isDetectingRef.current = false;
+    if (liveTimer.current) clearTimeout(liveTimer.current);
     liveTimer.current = null;
   };
 
   useEffect(() => {
     return () => {
-      if (liveTimer.current) clearInterval(liveTimer.current);
+      isDetectingRef.current = false;
+      if (liveTimer.current) clearTimeout(liveTimer.current);
     };
   }, []);
 
