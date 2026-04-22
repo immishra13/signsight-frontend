@@ -11,10 +11,12 @@ import { addSignData } from "../../redux/actions/signdataaction";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import DisplayImg from "../../assests/displayGif.gif";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 let startTime = "";
 
 const Detect = () => {
+  const navigate = useNavigate();
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const [webcamRunning, setWebcamRunning] = useState(false);
