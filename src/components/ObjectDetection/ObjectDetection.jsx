@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import Webcam from "react-webcam";
 import "./ObjectDetection.css";
 
-const API_BASE = "https://signsight-backend.onrender.com";
+// Production Backend URL (Hugging Face Spaces - 16GB RAM)
+const API_BASE = "https://ankurkrishnamishra-signsight.hf.space";
 
 export default function ObjectDetection() {
   const fileRef = useRef(null);
